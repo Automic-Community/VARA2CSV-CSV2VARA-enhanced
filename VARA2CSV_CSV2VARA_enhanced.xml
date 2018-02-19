@@ -1,0 +1,1235 @@
+<?xml version="1.0" encoding="ISO-8859-15"?>
+<uc-export clientvers="11.2.1+build.412">
+<FolderStruct>
+<includeExternalObjects>0</includeExternalObjects>
+<FOLD name="VARA2CSV_CSV2VARA" title="">
+<VARA id="1634941" link="0" name="VAR2CSV.SQLI.SELECT_EXECUTOR"/>
+<VARA id="1634942" link="0" name="VAR2CSV.SQLI.SELECT_LOGIN"/>
+<VARA id="1634944" link="0" name="VAR2CSV.SQLI.SELECT_VARA"/>
+<VARA id="1635217" link="0" name="VAR2CSV.VARA.SELECT_FILE"/>
+<PRPT id="1634007" link="0" name="CSV2VARA#PRPT"/>
+<SCRI id="1634008" link="0" name="CSV2VARA#SCRI"/>
+<SCRI id="1634009" link="0" name="CSV2VARA#SCRI_SENDTO"/>
+<PRPT id="1634010" link="0" name="VARA2CSV#PRPT"/>
+<SCRI id="1634011" link="0" name="VARA2CSV#SCRI"/>
+<SCRI id="1634012" link="0" name="VARA2CSV#SCRI_SENDTO"/>
+<VARA id="1634013" link="0" name="VARA2CSV#VARA"/>
+<VARA id="1634014" link="0" name="YESNO#VARA"/>
+</FOLD>
+</FolderStruct>
+<VARA OVD_VRName="FREI" data_type="SQLI" name="VAR2CSV.SQLI.SELECT_EXECUTOR" replacementmode="2">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>SQLI</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>SQL - internal</lblSource>
+<source>SQLI</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+</ATTR_VARA>
+<VARA state="1">
+<SQLI internal="YES">
+<command.sql/>
+<command.ora>select OH_Name from OH where OH_Idnr in (select HACL_OH_Idnr from HACL where HACL_Client = &amp;$CLIENT#)</command.ora>
+<command.db2/>
+<BindParams>
+<row Lnr="OVB_Lnr" Value="OVB_Value" id="OVB_OH_Idnr"/>
+</BindParams>
+<resultformat/>
+<infobar/>
+</SQLI>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</VARA>
+<VARA OVD_VRName="FREI" data_type="SQLI" name="VAR2CSV.SQLI.SELECT_LOGIN" replacementmode="2">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>SQLI</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>SQL - internal</lblSource>
+<source>SQLI</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+</ATTR_VARA>
+<VARA state="1">
+<SQLI internal="YES">
+<command.sql/>
+<command.ora>select OH_Name from OH where OH_Client = '&amp;$CLIENT#' and OH_Otype = 'LOGIN' and OH_DeleteFlag = '0'</command.ora>
+<command.db2/>
+<BindParams>
+<row Lnr="OVB_Lnr" Value="OVB_Value" id="OVB_OH_Idnr"/>
+</BindParams>
+<resultformat/>
+<infobar/>
+</SQLI>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</VARA>
+<VARA OVD_VRName="FREI" data_type="SQLI" name="VAR2CSV.SQLI.SELECT_VARA" replacementmode="2">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>SQLI</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>SQL - internal</lblSource>
+<source>SQLI</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+</ATTR_VARA>
+<VARA state="1">
+<SQLI internal="YES">
+<command.sql/>
+<command.ora>select OH_Name from OH where OH_Client = '&amp;$CLIENT#' and OH_Otype = 'VARA' and OH_DeleteFlag = '0'</command.ora>
+<command.db2/>
+<BindParams>
+<row Lnr="OVB_Lnr" Value="OVB_Value" id="OVB_OH_Idnr"/>
+</BindParams>
+<resultformat/>
+<infobar/>
+</SQLI>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</VARA>
+<VARA OVD_VRName="FREI" data_type="FILELIST" name="VAR2CSV.VARA.SELECT_FILE" replacementmode="2">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>FILELIST</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>Filelist</lblSource>
+<source>FILELIST</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+</ATTR_VARA>
+<VARA state="1">
+<FILELIST>
+<directory>&amp;P_REP#*.csv</directory>
+<HostDst>&amp;P_AGENT#</HostDst>
+<preferTaskHost>0</preferTaskHost>
+<Login>&amp;P_LOGIN#</Login>
+<preferTaskLogin>0</preferTaskLogin>
+</FILELIST>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</VARA>
+<PRPT name="CSV2VARA#PRPT">
+<HEADER state="1">
+<Title>CSV2VARA promptset</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="236" icon="PRPT" id="PRPTS" left="0" top="0" width="375"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="CSV2VARA"><properties><entry name="text">CSV2VARA</entry><entry name="modifiable">0</entry></properties><combo alt="1" dynamic="1" enabled="1" fill="b" filter="0" focus="0" id="P_AGENTs.00" nl="1" strict="1" text="Agent" tooltip="" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference" reftype="SQLI">VAR2CSV.SQLI.SELECT_EXECUTOR</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Agent</entry>
+        <entry name="quotes"/>
+        <entry name="id">P_AGENTs.00</entry>
+        <entry name="dynamic">1</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="onchangereset"/>
+        <entry name="customfield"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><combo alt="1" dynamic="1" enabled="1" fill="b" filter="0" focus="0" id="P_LOGINs.00" nl="1" strict="1" text="Login" tooltip="" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference" reftype="SQLI">VAR2CSV.SQLI.SELECT_LOGIN</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Login</entry>
+        <entry name="quotes"/>
+        <entry name="id">P_LOGINs.00</entry>
+        <entry name="dynamic">1</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="onchangereset"/>
+        <entry name="customfield"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><combo alt="1" dynamic="1" enabled="1" fill="b" filter="0" focus="0" id="P_VARAs.00" nl="1" strict="1" text="VARA Object" tooltip="" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference" reftype="SQLI">VAR2CSV.SQLI.SELECT_VARA</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">VARA Object</entry>
+        <entry name="quotes"/>
+        <entry name="id">P_VARAs.00</entry>
+        <entry name="dynamic">1</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="onchangereset"/>
+        <entry name="customfield"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><text alt="1" enabled="1" fill="b" focus="0" id="P_REPs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="File path" tooltip="" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="text">File path</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">P_REPs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+    </text><combo alt="1" dynamic="1" enabled="1" fill="b" filter="0" focus="0" id="P_FILEs.00" nl="1" strict="1" text="File Name" tooltip="" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference" reftype="FILELIST">VAR2CSV.VARA.SELECT_FILE</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">File Name</entry>
+        <entry name="quotes"/>
+        <entry name="id">P_FILEs.00</entry>
+        <entry name="dynamic">1</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="onchangereset"/>
+        <entry name="customfield"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><text alt="1" enabled="1" fill="b" focus="0" id="P_DELIMITERs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Delimiter" tooltip="" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="text">Delimiter</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">P_DELIMITERs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+    </text><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="P_SKIP_HEADERs.00" nl="1" text="Skip header (1st line)" tooltip="" required="0">
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">YESNO#VARA</entry>
+        <entry name="text">Skip header (1st line)</entry>
+        <entry name="quotes"/>
+        <entry name="id">P_SKIP_HEADERs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+         </properties>
+    </dynradiogroup><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="P_CLEARVARAs.00" nl="1" text="Clear VARA b4 load" tooltip="" required="0">
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">YESNO#VARA</entry>
+        <entry name="text">Clear VARA b4 load</entry>
+        <entry name="quotes"/>
+        <entry name="id">P_CLEARVARAs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+         </properties>
+    </dynradiogroup></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><P_AGENTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_AGENT#" ReadFromTable="OPSE"></P_AGENTs.00><P_LOGINs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_LOGIN#" ReadFromTable="OPSE"></P_LOGINs.00><P_VARAs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_VARA#" ReadFromTable="OPSE"></P_VARAs.00><P_REPs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_REP#" ReadFromTable="OPSE">/tmp/</P_REPs.00><P_FILEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_FILE#" ReadFromTable="OPSE"></P_FILEs.00><P_DELIMITERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_DELIMITER#" ReadFromTable="OPSE">;</P_DELIMITERs.00><P_SKIP_HEADERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_SKIP_HEADER#" ReadFromTable="OPSE">No</P_SKIP_HEADERs.00><P_CLEARVARAs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_CLEARVARA#" ReadFromTable="OPSE">No</P_CLEARVARAs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</PRPT>
+<SCRI name="CSV2VARA#SCRI">
+<XHEADER state="1">
+<Title>CSV2VARA</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<Active>1</Active>
+<OH_SubType/>
+<CustomAttributes KeyListID="0" dataRequestID="0"/>
+</XHEADER>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_SCRI state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<IntAccount/>
+<ActAtRun>1</ActAtRun>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+<AutoDeactNo>0</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<AutoDeactAlways>1</AutoDeactAlways>
+<DeactDelay>0</DeactDelay>
+</ATTR_SCRI>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| |</FcstStatus>
+<Ert>1</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="CSV2VARA#PRPT" name="CSV2VARA#PRPT" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="CSV2VARA#PRPT" ontop="1">
+<PRPTBOX promptset="CSV2VARA#PRPT" prptmode="1"/>
+</PROMPTSET>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[! CSV2VARA 1.0 by Joel Wiesmann
+! Distribution via https://marketplace.automic.com
+
+! This SCRI imports a CSV file and converts it's content to a VARA.
+! The options include to skip the CSV header or to clear the content
+! of the VARA before the load takes place.
+
+:PRINT
+:PRINT "* CSV2VARA 1.0"
+:PRINT "* * * * * * * * * * * * * * * * * * * * * *"
+:PRINT "* Variable:   &P_VARA#"
+:PRINT "* Clear:      &P_CLEARVARA#"
+:PRINT "* Skipheader: &P_SKIP_HEADER#"
+:PRINT "* Server:     &P_AGENT#"
+:PRINT "* Login:      &P_LOGIN#"
+:PRINT "* Rep:        &P_REP#"
+:PRINT "* File:       &P_FILE#"
+:PRINT "* * * * * * * * * * * * * * * * * * * * * *"
+
+! Verify VARA type and existance
+:SET &L_TYPE# = GET_OBJECT_TYPE(&P_VARA#)
+:IF &L_TYPE# NE "VARA"
+:  PRINT "! &P_VARA# is of type &L_TYPE# not VARA (numeric value means object does not exist)!"
+:  EXIT 1
+:ENDIF
+
+! If the VARA should be cleared before the load, do this here. There is still a small risk that the load
+! fails and the VARA remains empty.
+:IF &P_CLEARVARA# EQ "Yes"
+:  PRINT "* VARA &P_VARA# cleared."
+:  DELETE_VAR &P_VARA#
+:ENDIF
+
+:DEFINE &L_VARALINE#, string, 7
+
+! Set the handle to the file and process it line-by-line
+:SET &L_LINECOUNT# = 0
+:SET &L_HND# = PREP_PROCESS_FILE(&P_AGENT#,"&P_REP#&P_FILE#",,"COL=DELIMITER,DELIMITER=*&P_DELIMITER#*","UC_LOGIN=&P_LOGIN#")
+:PROCESS &L_HND#
+:  SET &L_SKIP# = "N"
+:  SET &L_LINECOUNT# = ADD(&L_LINECOUNT#, 1)
+
+!  Get the line directly into the array structure
+:  FILL &L_VARALINE#[] = GET_PROCESS_LINE(&L_HND#)
+
+!  Skip header if requested & line is 1
+:  IF &L_LINECOUNT# EQ 1
+:    IF &P_SKIP_HEADER# EQ "Yes"
+:      SET &L_SKIP# = "Y"
+:    ENDIF
+:  ENDIF
+
+!  If it is not an empty line, proceed
+:  IF &L_VARALINE#[1] EQ ""
+:      SET &L_SKIP# = "Y"
+:  ENDIF
+
+!  If there was no condition to skip the load, PUT the array into the VARA
+:  IF &L_SKIP# NE "Y"
+:    PUT_VAR &P_VARA#, &L_VARALINE#[1], &L_VARALINE#[2], &L_VARALINE#[3], &L_VARALINE#[4], &L_VARALINE#[5], &L_VARALINE#[6]
+:  ENDIF
+:ENDPROCESS
+
+:SET &L_LINECOUNT# = FORMAT(&L_LINECOUNT#)
+:PRINT "* Processed &L_LINECOUNT# lines."]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</SCRI>
+<SCRI name="CSV2VARA#SCRI_SENDTO">
+<XHEADER state="1">
+<Title>CSV2VARA for UC_SENDTO registration</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<Active>1</Active>
+<OH_SubType/>
+<CustomAttributes KeyListID="0" dataRequestID="0"/>
+</XHEADER>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_SCRI state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<IntAccount/>
+<ActAtRun>1</ActAtRun>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+<AutoDeactNo>0</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<AutoDeactAlways>1</AutoDeactAlways>
+<DeactDelay>0</DeactDelay>
+</ATTR_SCRI>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| |</FcstStatus>
+<Ert>10</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[! CSV2VARA SENDTO 1.0 by Joel Wiesmann
+! Distribution via https://marketplace.automic.com
+
+! If you have default values in the promptset you can set the interactive mode to off
+:SET &L_INTERACTIVE# = "Y"
+
+! Forward the currently selected object to the CSV2VARA SCRI
+:READ &NAME#,,
+
+:PRINT "* Read &NAME# from sendto selection"
+
+:PUT_PROMPT_BUFFER P_VARA# = &NAME#
+:IF &L_INTERACTIVE# EQ "Y"
+:  SET &L_PROMPTS# = "ENABLE_PROMPTS"
+:ENDIF
+
+! Forward the object to CSV2VARA
+:SET &L_RET# = ACTIVATE_UC_OBJECT('CSV2VARA#SCRI',WAIT,,,,PASS_VALUES,,,&L_PROMPTS#)
+
+:IF &L_RET# EQ 0
+:  PRINT "! There was an issue during activation of CSV2VARA."
+:  EXIT 1
+:ENDIF
+
+:SET &L_STATUS# = GET_STATISTIC_DETAIL(&L_RET#,STATUS)
+:IF &L_STATUS# LT 1900
+:  PRINT "! Returncode of CSV2VARA is in an error state!"
+:  EXIT 1
+:ENDIF]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</SCRI>
+<PRPT name="VARA2CSV#PRPT">
+<HEADER state="1">
+<Title>VARA2CSV promptset</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType/>
+</HEADER>
+<PROMPTDESIGNER state="1">
+<DESIGNER/>
+</PROMPTDESIGNER>
+<PROMPTSETXUI state="1">
+<XUIEDITOR><![CDATA[<dialog height="258" icon="PRPT" id="PRPTS" left="0" top="0" width="375"><readpanel fill="b" id="PRPTBOX" nl="1" scroll="v" text="VARA2CSV"><properties><entry name="text">VARA2CSV</entry><entry name="modifiable">0</entry></properties><combo alt="1" dynamic="1" enabled="1" fill="b" filter="0" focus="0" id="P_AGENTs.00" nl="1" strict="1" text="Agent" tooltip="" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference" reftype="SQLI">VAR2CSV.SQLI.SELECT_EXECUTOR</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Agent</entry>
+        <entry name="quotes"/>
+        <entry name="id">P_AGENTs.00</entry>
+        <entry name="dynamic">1</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="onchangereset"/>
+        <entry name="customfield"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="P_LOGINs.00" nl="1" strict="1" text="Login" tooltip="" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference" reftype="SQLI">VAR2CSV.SQLI.SELECT_LOGIN</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">Login</entry>
+        <entry name="quotes"/>
+        <entry name="id">P_LOGINs.00</entry>
+        <entry name="dynamic">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="onchangereset"/>
+        <entry name="customfield"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><text alt="1" enabled="1" fill="b" focus="0" id="P_HEADERs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Custom header" tooltip="" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="text">Custom header</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">P_HEADERs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+    </text><combo alt="1" dynamic="0" enabled="1" fill="b" filter="0" focus="0" id="P_VARAs.00" nl="1" strict="1" text="VARA Object" tooltip="" vtype="i"><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command owner="_self" owneraction="setsource" ownerparam="src|_dialog@src"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptcombolist" target="_self" targetaction="setlist" wait="0"/>
+         
+         
+         
+      <properties>
+        <entry listparam="" name="reference" reftype="SQLI">VAR2CSV.SQLI.SELECT_VARA</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">VARA Object</entry>
+        <entry name="quotes"/>
+        <entry name="id">P_VARAs.00</entry>
+        <entry name="dynamic">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="onchangereset"/>
+        <entry name="customfield"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </combo><text alt="1" enabled="1" fill="b" focus="0" id="P_REPs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="File path" tooltip="" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="text">File path</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">P_REPs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="P_FILEs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" separator=";" showaspassword="0" text="File Name" tooltip="" upper="0" required="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="xmlkey"/>
+        <entry name="xmlpath"/>
+        <entry name="text">File Name</entry>
+        <entry name="multiline">0</entry>
+        <entry name="multilineIcon">0</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">P_FILEs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">1</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+        <entry name="onchangereset"/>
+        <entry name="resetable">1</entry>
+      <entry name="initvalue"/>
+         </properties>
+    </text><text alt="1" enabled="1" fill="b" focus="0" id="P_DELIMITERs.00" inputassistance="0" len="" multiline="0" multilineIcon="0" nl="1" regex="" required="0" separator=";" showaspassword="0" text="Delimiter" tooltip="" upper="0"><oninputassistant><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptname|@id"/><command request="_internal" target="_view" targetaction="setAttribute" targetparam="promptvalue|@value"/><command owner="_promptsetcontainer" owneraction="getData" request="getpromptinputassistance" target="_chainwindow"/></oninputassistant>
+         
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">UC_DATATYPE_STRING</entry>
+        <entry name="text">Delimiter</entry>
+        <entry name="multiselect">0</entry>
+        <entry name="separator">;</entry>
+        <entry name="len"/>
+        <entry name="quotes"/>
+        <entry name="id">P_DELIMITERs.00</entry>
+        <entry name="regex"/>
+        <entry name="inputassistance">0</entry>
+        <entry name="enabled">0</entry>
+        <entry name="required">0</entry>
+        <entry name="upper">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="showaspassword">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+            <entry name="multiline">0</entry>
+            <entry name="multilineIcon">0</entry>
+            <entry name="onchangereset"/>
+            <entry name="resetable">1</entry>
+         </properties>
+    </text><dynradiogroup alt="1" enabled="1" fill="b" focus="" id="P_MODEs.00" nl="1" text="Mode" tooltip="" required="0">
+      <properties>
+        <entry listparam="C,N" name="reference" reftype="STATIC">VARA2CSV#VARA</entry>
+        <entry name="text">Mode</entry>
+        <entry name="quotes"/>
+        <entry name="id">P_MODEs.00</entry>
+        <entry name="enabled">0</entry>
+        <entry name="focus">0</entry>
+        <entry name="tooltip"/>
+        <entry name="modifiable">1</entry>
+        <entry name="customfield"/>
+      <entry name="initvalue"/>
+         <entry name="xmlkey"/>
+            <entry name="xmlpath"/>
+         </properties>
+    </dynradiogroup></readpanel></dialog>]]></XUIEDITOR>
+</PROMPTSETXUI>
+<PROMPTSETDATA state="1">
+<DATAEDITOR><![CDATA[<PRPTS ontop="1"><PRPTBOX><P_AGENTs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_AGENT#" ReadFromTable="OPSE"></P_AGENTs.00><P_LOGINs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_LOGIN#" ReadFromTable="OPSE"></P_LOGINs.00><P_HEADERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_HEADER#" ReadFromTable="OPSE"></P_HEADERs.00><P_VARAs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_VARA#" ReadFromTable="OPSE"></P_VARAs.00><P_REPs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_REP#" ReadFromTable="OPSE">/tmp/</P_REPs.00><P_FILEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_FILE#" ReadFromTable="OPSE">output_&amp;P_VARA#.csv</P_FILEs.00><P_DELIMITERs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_DELIMITER#" ReadFromTable="OPSE">;</P_DELIMITERs.00><P_MODEs.00 haslist="0" msgnr="-1" msginsert="" altview="0" promptname="P_MODE#" ReadFromTable="OPSE">Cancel if file exists</P_MODEs.00></PRPTBOX></PRPTS>]]></DATAEDITOR>
+</PROMPTSETDATA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</PRPT>
+<SCRI name="VARA2CSV#SCRI">
+<XHEADER state="1">
+<Title>VARA2CSV</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<Active>1</Active>
+<OH_SubType/>
+<CustomAttributes KeyListID="0" dataRequestID="0"/>
+</XHEADER>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_SCRI state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<IntAccount/>
+<ActAtRun>1</ActAtRun>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+<AutoDeactNo>0</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<AutoDeactAlways>1</AutoDeactAlways>
+<DeactDelay>0</DeactDelay>
+</ATTR_SCRI>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| |</FcstStatus>
+<Ert>1</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+<node content="1" id="VARA2CSV#PRPT" name="VARA2CSV#PRPT" parent="PRPTS" type="PROMPTSET">
+<PROMPTSET name="VARA2CSV#PRPT" ontop="1">
+<PRPTBOX promptset="VARA2CSV#PRPT" prptmode="1"/>
+</PROMPTSET>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[! VARA2CSV 1.0 by Joel Wiesmann
+! Distribution via https://marketplace.automic.com
+
+! This SCRI exports a VARA into a CSV file. You can set a custom
+! header (top line) or delimiter. Also the behaviour if the export
+! csv file already exists can be set in the promptset.
+! If the filename contains [VARA] it will be replaced with the object name.
+
+:SET &L_FILE# = STR_SUBSTITUTE(&P_FILE#, "[VARA]", &P_VARA#)
+
+:PRINT
+:PRINT "* VARA2CSV 1.0"
+:PRINT "* * * * * * * * * * * * * * * * * * * * * *"
+:PRINT "* Variable: &P_VARA#"
+:PRINT "* Mode:     &P_MODE#"
+:PRINT "* Server:   &P_AGENT#"
+:PRINT "* Login:    &P_LOGIN#"
+:PRINT "* Rep:      &P_REP#"
+:PRINT "* File:     &P_FILE#"
+:PRINT "* Header:   &P_HEADER#"
+:PRINT "* Delim.:   &P_DELIMITER#"
+:PRINT "* * * * * * * * * * * * * * * * * * * * * *"
+
+! Verify VARA type and existance
+:SET &L_TYPE# = GET_OBJECT_TYPE(&P_VARA#)
+:IF &L_TYPE# NE "VARA"
+:  PRINT "! &P_VARA# is of type &L_TYPE# not VARA (numeric value means object does not exist)!"
+:  EXIT 1
+:ENDIF
+
+! Open the handle to the VARA object
+:SET &L_HND_VARA# = PREP_PROCESS_VAR("&P_VARA#")
+
+! Determine the mode
+:SWITCH &P_MODE#
+:  CASE "Append to file"
+:    SET &L_MODE# = "APPEND"
+:  CASE "Cancel if file exists"
+:    SET &L_MODE# = "CANCEL"
+:  CASE "Overwrite existing file"
+:    SET &L_MODE# = "OVERWRITE"
+:ENDSWITCH
+
+! If we have a header, we create a separate process that we write first in the requested mode. Afterwards
+! we append the VARA content.
+:IF &P_HEADER# NE ""
+!  Create a separate process to write the header to the file.
+:  SET &L_HND_HEADER# = CREATE_PROCESS(NEW)
+:  SET &L_RET# = PUT_PROCESS_LINE(&L_HND_HEADER#, &P_HEADER#)
+
+:  SET &L_RET# = WRITE_PROCESS(&L_HND_HEADER#,"&P_REP#&P_FILE#","&P_AGENT#","&P_LOGIN#",&L_MODE#)
+:  IF &L_RET# GT 0
+:    PRINT "! File could not be written. See report for details."
+:    EXIT 1
+:  ENDIF
+
+!  The mode for the "real content" when having custom header is always APPEND.
+:  SET &L_RET# = WRITE_PROCESS(&L_HND_VARA#,"&P_REP#&P_FILE#","&P_AGENT#","&P_LOGIN#",APPEND,,,ALL,"&P_DELIMITER#")
+:ELSE
+:  SET &L_RET# = WRITE_PROCESS(&L_HND_VARA#,"&P_REP#&P_FILE#","&P_AGENT#","&P_LOGIN#",&L_MODE#,,,ALL,"&P_DELIMITER#")
+:ENDIF
+
+:IF &L_RET# GT 0
+:  PRINT "! File could not be written. See report for details."
+:  EXIT 1
+:ENDIF]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</SCRI>
+<SCRI name="VARA2CSV#SCRI_SENDTO">
+<XHEADER state="1">
+<Title>VARA2CSV for UC_SENDTO registration</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<Active>1</Active>
+<OH_SubType/>
+<CustomAttributes KeyListID="0" dataRequestID="0"/>
+</XHEADER>
+<SYNCREF state="1">
+<Syncs/>
+</SYNCREF>
+<ATTR_SCRI state="1">
+<Queue>CLIENT_QUEUE</Queue>
+<StartType/>
+<ExtRepDef>1</ExtRepDef>
+<ExtRepAll>0</ExtRepAll>
+<ExtRepNone>0</ExtRepNone>
+<IntAccount/>
+<ActAtRun>1</ActAtRun>
+<UC4Priority>0</UC4Priority>
+<MaxParallel2>0</MaxParallel2>
+<MpElse1>1</MpElse1>
+<MpElse2>0</MpElse2>
+<TZ/>
+<AutoDeactNo>0</AutoDeactNo>
+<AutoDeact1ErrorFree>0</AutoDeact1ErrorFree>
+<AutoDeactErrorFree>0</AutoDeactErrorFree>
+<DeactWhen/>
+<AutoDeactAlways>1</AutoDeactAlways>
+<DeactDelay>0</DeactDelay>
+</ATTR_SCRI>
+<RUNTIME state="1">
+<MaxRetCode>0</MaxRetCode>
+<MrcExecute/>
+<MrcElseE>0</MrcElseE>
+<FcstStatus>0| |</FcstStatus>
+<Ert>15</Ert>
+<ErtMethodDef>1</ErtMethodDef>
+<ErtMethodFix>0</ErtMethodFix>
+<ErtFix>0</ErtFix>
+<ErtDynMethod>2|Average</ErtDynMethod>
+<ErtMethodDyn>0</ErtMethodDyn>
+<ErtCnt>0</ErtCnt>
+<ErtCorr>0</ErtCorr>
+<ErtIgn>0</ErtIgn>
+<ErtIgnFlg>0</ErtIgnFlg>
+<ErtMinCnt>0</ErtMinCnt>
+<MrtMethodNone>1</MrtMethodNone>
+<MrtMethodFix>0</MrtMethodFix>
+<MrtFix>0</MrtFix>
+<MrtMethodErt>0</MrtMethodErt>
+<MrtErt>0</MrtErt>
+<MrtMethodDate>0</MrtMethodDate>
+<MrtDays>0</MrtDays>
+<MrtTime>00:00</MrtTime>
+<MrtTZ/>
+<SrtMethodNone>1</SrtMethodNone>
+<SrtMethodFix>0</SrtMethodFix>
+<SrtFix>0</SrtFix>
+<SrtMethodErt>0</SrtMethodErt>
+<SrtErt>0</SrtErt>
+<MrtCancel>0</MrtCancel>
+<MrtExecute>0</MrtExecute>
+<MrtExecuteObj/>
+</RUNTIME>
+<DYNVALUES state="1">
+<dyntree>
+<node content="1" id="VALUE" name="Variables" parent="" type="VALUE">
+<VALUE state="1">
+<Values/>
+<Mode>0</Mode>
+</VALUE>
+</node>
+</dyntree>
+</DYNVALUES>
+<ROLLBACK state="1">
+<RollbackFlag>0</RollbackFlag>
+<CBackupObj/>
+<CRollbackObj/>
+<FBackupPath/>
+<FDeleteBefore>0</FDeleteBefore>
+<FInclSubDirs>0</FInclSubDirs>
+</ROLLBACK>
+<SCRIPT mode="1" state="1">
+<MSCRI><![CDATA[! VARA2CSV SENDTO 1.0 by Joel Wiesmann
+! Distribution via https://marketplace.automic.com
+
+! If you have default values in the promptset you can set the interactive mode to off
+:SET &L_INTERACTIVE# = "Y"
+
+! Forward the currently selected object to the VARA2CSV SCRI
+:READ &NAME#,,
+
+:PRINT "* Read &NAME# from sendto selection"
+
+:PUT_PROMPT_BUFFER P_VARA# = &NAME#
+:IF &L_INTERACTIVE# EQ "Y"
+:  SET &L_PROMPTS# = "ENABLE_PROMPTS"
+:ENDIF
+
+! Forward the object to VARA2CSV
+:SET &L_RET# = ACTIVATE_UC_OBJECT('VARA2CSV#SCRI',WAIT,,,,PASS_VALUES,,,&L_PROMPTS#)
+
+:IF &L_RET# EQ 0
+:  PRINT "! There was an issue during activation of VARA2CSV."
+:  EXIT 1
+:ENDIF
+
+:SET &L_STATUS# = GET_STATISTIC_DETAIL(&L_RET#,STATUS)
+:IF &L_STATUS# LT 1900
+:  PRINT "! Returncode of VARA2CSV is in an error state!"
+:  EXIT 1
+:ENDIF]]></MSCRI>
+</SCRIPT>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</SCRI>
+<VARA OVD_VRName="FREI" data_type="STATIC" name="VARA2CSV#VARA" replacementmode="2">
+<HEADER state="1">
+<Title>Export mode - OVERWRITE / APPEND / CANCEL</Title>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>STATIC</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>Static</lblSource>
+<source>STATIC</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+</ATTR_VARA>
+<VARA state="1">
+<Variables>
+<row Name="Append to file" Value="Append to file" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Cancel if file exists" Value="Cancel if file exists" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Overwrite existing file" Value="Overwrite existing file" Value1="" Value2="" Value3="" Value4=""/>
+</Variables>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</VARA>
+<VARA OVD_VRName="FREI" data_type="STATIC" name="YESNO#VARA" replacementmode="2">
+<HEADER state="1">
+<Title/>
+<ArchiveKey1/>
+<ArchiveKey2/>
+<OH_SubType>STATIC</OH_SubType>
+</HEADER>
+<ATTR_VARA state="1">
+<Type>C|Text</Type>
+<lblSource>Static</lblSource>
+<source>STATIC</source>
+<VRName>FREI|Freely selected</VRName>
+<NotFoundErr>0</NotFoundErr>
+<NotFoundDef>1</NotFoundDef>
+<ShareN>0</ShareN>
+<ShareL>0</ShareL>
+<ShareR>0</ShareR>
+<MaxValue_C>1024</MaxValue_C>
+<CheckMax_C>0</CheckMax_C>
+<uppercase>0</uppercase>
+<sortColumn>0</sortColumn>
+<sortDirection>0</sortDirection>
+</ATTR_VARA>
+<VARA state="1">
+<Variables>
+<row Name="No" Value="No" Value1="" Value2="" Value3="" Value4=""/>
+<row Name="Yes" Value="Yes" Value1="" Value2="" Value3="" Value4=""/>
+</Variables>
+</VARA>
+<DOCU_Docu state="1" type="text">
+<DOC/>
+</DOCU_Docu>
+<DOCU_Etendue- state="1" type="xml">
+<DOC/>
+</DOCU_Etendue->
+</VARA>
+</uc-export>
